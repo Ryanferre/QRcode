@@ -12,7 +12,7 @@ ApiQR.get('/codeqrgenerate', async (req, res) => {
     const textToQr = req.query.text || 'https://github.com/Ryanferre';
     try {
         const QrGenerate = await qrcode_1.default.toDataURL(textToQr);
-        res.send(`<img src="${QrGenerate}" />`);
+        res.send(`${QrGenerate}`);
     }
     catch (error) {
         res.send('erro de geracao');

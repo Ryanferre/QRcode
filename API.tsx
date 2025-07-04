@@ -11,7 +11,7 @@ ApiQR.get('/codeqrgenerate', async (req, res) => {
    try {
     const QrGenerate= await QRCode.toDataURL(textToQr)
 
-    res.send(`<img src="${QrGenerate}" />`)
+    res.send(`${QrGenerate}`)
    } catch (error) {
     res.send('erro de geracao')
    }
